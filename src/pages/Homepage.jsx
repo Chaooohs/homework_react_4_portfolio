@@ -1,7 +1,5 @@
-import '../index.css'
-import Nav from '../components/Nav'
 import Ellipse from '../components/Ellipse'
-import Footer from '../components/Footer'
+import Nav from '../components/Nav'
 
 import image1 from '../img/image1.png'
 import image2 from '../img/image2.png'
@@ -13,11 +11,12 @@ import arrowRight from '../img/arrow-rigth-black.svg'
 const Homepage = () => {
 
   return (
-    <div className="page">
+    <>
       <Nav />
+
       <header>
         <div className="header" id='up'>
-          <h1 className='text_lg title'>
+          <h1 className='text_lg title-home'>
             I have tried to express the terrible passions of humanity by means of red and purple
           </h1>
         </div>
@@ -89,9 +88,7 @@ const Homepage = () => {
       </main>
 
       <Ellipse text={`html + css`} icon={arrowRight} data="next" />
-
-      <Footer />
-    </div>
+    </>
   )
 }
 
