@@ -3,9 +3,7 @@ import ellipse from '../img/ellipse.png'
 const el = (selector) => document.querySelector(selector);
 const all = (selector) => document.querySelectorAll(selector);
 
-const Ellipse = ({ text, icon, data}) => {
-
-
+const Ellipse = ({ text, icon, data }) => {
 
   const ellipseHoverUpHandler = (e) => {
 
@@ -32,7 +30,7 @@ const Ellipse = ({ text, icon, data}) => {
   }
 
   return (
-    <div class="wrap">
+    <div className="wrap">
       <div className='ellipse somework__ellipse' data-line={data} onMouseOver={ellipseHoverUpHandler} onMouseOut={ellipseHoverDownHandler}>
         <img className='ellipse__img' data-image={data} src={ellipse} alt="img"></img>
         <div className='ellipse__content'>

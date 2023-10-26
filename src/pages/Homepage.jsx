@@ -1,5 +1,5 @@
-import Ellipse from '../components/Ellipse'
 import Nav from '../components/Nav'
+import Ellipse from '../components/Ellipse'
 
 import image1 from '../img/image1.png'
 import image2 from '../img/image2.png'
@@ -7,6 +7,7 @@ import image3 from '../img/image3.png'
 import image4 from '../img/image4.png'
 import image5 from '../img/image5.png'
 import arrowRight from '../img/arrow-rigth-black.svg'
+import arrowWhite from '../img/arrow-rigth-white.svg'
 
 const Homepage = () => {
 
@@ -64,24 +65,44 @@ const Homepage = () => {
           <div className='somework grid'>
             <a href='#!' className='somework__one'>
               <img src={image1} alt='work one'></img>
+              <div className='description text_sm'>
+                <span>The Starry Night</span>
+                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
+              </div>
             </a>
             <a href='#!' className='somework__two'>
               <img src={image2} alt='work one'></img>
+              <div className='description text_sm'>
+                <span>The Starry Night</span>
+                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
+              </div>
             </a>
             <a href='#!' className='somework__three'>
               <img src={image3} alt='work one'></img>
+              <div className='description text_sm'>
+                <span>The Starry Night</span>
+                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
+              </div>
             </a>
             <div className='somework__four text_md'>
               The interior depicted is the Café de la Gare, 30 Place Lamartine, run by Joseph Ginoux and his wife Marie, who in November 1888 posed for Van Gogh's and Gauguin's Arlésienne; a bit later, Joseph Ginoux evidently posed for both artists.
             </div>
             <a href='#!' className='somework__five'>
               <img src={image4} alt='work one'></img>
+              <div className='description text_sm'>
+                <span>The Starry Night</span>
+                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
+              </div>
             </a>
             <div className='somework__six text_md'>
               he Night Café (French: Le Café de nuit) is an oil painting created by Dutch artist Vincent van Gogh in September 1888 in Arles.[1] Its title is inscribed lower right beneath the signature. The painting is owned by Yale University and is currently held at the Yale University Art Gallery in New Haven, Connecticut.
             </div>
             <a href='#!' className='somework__seven'>
               <img src={image5} alt='work one'></img>
+              <div className='description text_sm'>
+                <span>The Starry Night</span>
+                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
+              </div>
             </a>
           </div>
         </div>

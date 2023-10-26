@@ -67,6 +67,18 @@ main {
   grid-template-columns: repeat(14, 1fr);
 }
 
+.description {
+  position: relative;
+  box-sizing: border-box;
+  padding: 8px 30px;
+}
+
+.description__arrow {
+  width: 16px;
+  height: 8px;
+  margin-left: 10px;
+}
+
 /* #endregion */
 
 /* #region fonts */
@@ -120,6 +132,14 @@ main {
   &__item {
     padding: 0 4rem;
     cursor: pointer;
+  }
+
+  &__item:hover .list__link {
+    color: #fff700;
+  }
+
+  &__link {
+    transition: all .1s linear;
   }
 }
 
