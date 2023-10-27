@@ -68,15 +68,34 @@ main {
 }
 
 .description {
-  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  text-transform: uppercase;
   box-sizing: border-box;
   padding: 8px 30px;
 }
 
 .description__arrow {
-  width: 16px;
-  height: 8px;
-  margin-left: 10px;
+  width: 30px;
+  height: 12px;
+  margin-left: 18px;
+}
+
+.card img {
+  object-fit: cover;
+}
+
+.card .description {
+  transition: all .1s linear;
+}
+
+.card:hover .description {
+  color: #EB5757;
+}
+
+.notes {
+  text-transform: lowercase;
 }
 
 /* #endregion */

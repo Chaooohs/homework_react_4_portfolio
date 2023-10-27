@@ -1,6 +1,9 @@
 import Nav from '../components/Nav'
 import Ellipse from '../components/Ellipse'
 
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'
+
 import image1 from '../img/image6.png'
 import image2 from '../img/image7.png'
 import image3 from '../img/image8.png'
@@ -11,6 +14,16 @@ import arrowRight from '../img/arrow-rigth-black.svg'
 import arrowWhite from '../img/arrow-rigth-white.svg'
 
 const Htmlpage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
+  const navigate = useNavigate();
+  const navigateToHandler = () => navigate('/')
+
+
+
   return (
     <>
       <Nav />
@@ -70,7 +83,7 @@ const Htmlpage = () => {
         </div>
       </main>
 
-      <Ellipse text={`js`} icon={arrowRight} data="next" />
+      <Ellipse onNavigateTo={navigateToHandler} text={`js`} icon={arrowRight} data="next" />
     </>
   )
 }
