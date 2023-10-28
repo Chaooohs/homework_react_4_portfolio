@@ -6,7 +6,7 @@ const Works = ({ works }) => {
     <>
       {
         works.map((item, index) => {
-          return <WorkCard id={index} workLink={item.workLink} imageLink={item.workImage}
+          return <WorkCard id={item.id} workLink={item.workLink} imageLink={item.workImage}
             description={item.description} note={item.note} key={index} />
         })
       }

@@ -8,10 +8,9 @@ import { useNavigate } from 'react-router-dom'
 import arrowRight from '../img/arrow-rigth-black.svg'
 import arrowLeft from '../img/arrow-left-black.svg'
 
-const Htmlpage = ({data}) => {
+const HtmlPage = ({ data }) => {
 
   const html = data.filter((item) => (item.categories === 'html'))
-  console.log(html)
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -38,7 +37,7 @@ const Htmlpage = ({data}) => {
           </div>
         </div>
       </main>
-      
+
       <div className="wrap">
         <Ellipse onNavigateTo={navigateToPrevHandler} text={`Home`} icon={arrowLeft} data="prev" />
         <Ellipse onNavigateTo={navigateToNextHandler} text={`Js`} icon={arrowRight} data="next" />
@@ -47,4 +46,4 @@ const Htmlpage = ({data}) => {
   )
 }
 
-export default Htmlpage
+export default HtmlPage

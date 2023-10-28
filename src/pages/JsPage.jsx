@@ -8,17 +8,17 @@ import { useNavigate } from 'react-router-dom'
 import arrowRight from '../img/arrow-rigth-black.svg'
 import arrowLeft from '../img/arrow-left-black.svg'
 
-const ReactPage = ({ data }) => {
+const JsPage = ({ data }) => {
 
-  const react = data.filter((item) => (item.categories === 'react'))
+  const js = data.filter((item) => (item.categories === 'js'))
 
   useEffect(() => {
     window.scrollTo(0, 0);
   });
 
   const navigate = useNavigate();
-  const navigateToPrevHandler = () => navigate('/Js')
-  const navigateToNextHandler = () => navigate('/')
+  const navigateToPrevHandler = () => navigate('/Html')
+  const navigateToNextHandler = () => navigate('/React')
 
   return (
     <>
@@ -33,17 +33,17 @@ const ReactPage = ({ data }) => {
       <main>
         <div className="wrap">
           <div className='work grid'>
-            <Works works={react} />
+            <Works works={js} />
           </div>
         </div>
       </main>
 
       <div className="wrap">
-        <Ellipse onNavigateTo={navigateToPrevHandler} text={`Js`} icon={arrowLeft} data="prev" />
-        <Ellipse onNavigateTo={navigateToNextHandler} text={`Home`} icon={arrowRight} data="next" />
+        <Ellipse onNavigateTo={navigateToPrevHandler} text={`Html + Css`} icon={arrowLeft} data="prev" />
+        <Ellipse onNavigateTo={navigateToNextHandler} text={`React`} icon={arrowRight} data="next" />
       </div>
     </>
   )
 }
 
-export default ReactPage
+export default JsPage

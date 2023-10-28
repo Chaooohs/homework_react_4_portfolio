@@ -8,7 +8,7 @@ import image2 from '../img/image2.png'
 import arrowRight from '../img/arrow-rigth-black.svg'
 import arrowLeft from '../img/arrow-left-black.svg'
 
-const Homepage = () => {
+const HomePage = () => {
 
   useEffect(() => {
     // 👇️ scroll to top on page load
@@ -100,4 +100,4 @@ const Homepage = () => {
   )
 }
 
-export default Homepage
+export default HomePage

@@ -2,10 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Layout from "./components/Layout";
-import Homepage from "./pages/Homepage"
-import Htmlpage from "./pages/Htmlpage";
-import Js from "./pages/Js";
-import Reactpage from "./pages/Reactpage";
+import HomePage from "./pages/HomePage"
+import HtmlPage from "./pages/HtmlPage";
+import JsPage from "./pages/JsPage";
+import ReactPage from "./pages/ReactPage";
 
 function App() {
 
@@ -27,10 +27,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Homepage />} />
-            <Route path="Html" element={<Htmlpage data={works} />} />
-            <Route path="Js" element={<Js />} />
-            <Route path="React" element={<Reactpage data={works} />} />
+            <Route index element={<HomePage />} />
+            <Route path="Html" element={<HtmlPage data={works} />} />
+            <Route path="Js" element={<JsPage data={works} />} />
+            <Route path="React" element={<ReactPage data={works} />} />
           </Route>
         </Routes>
       </BrowserRouter>
