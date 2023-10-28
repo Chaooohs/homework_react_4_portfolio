@@ -22,7 +22,6 @@ body {
 img {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
 }
 
 ul {
@@ -295,27 +294,33 @@ main {
   grid-template-rows: repeat(17, 10cqi);
   margin-top: 8%;
 }
-.work__one {
+
+#card0 {
   grid-row: 1/6;
   grid-column: 1/8;
 }
-.work__two {
+
+#card1 {
   grid-row: 2/5;
   grid-column: 9/14;
 }
-.work__three {
+
+#card2 {
   grid-row: 7/10;
   grid-column: 4/9;
 }
-.work__four {
+
+#card3 {
   grid-row: 7/12;
   grid-column: 10/15;
 }
-.work__five {
+
+#card4 {
   grid-row: 13/16;
   grid-column: 1/7;
 }
-.work__six {
+
+#card5 {
   grid-row: 14/18;
   grid-column: 8/15;
 }

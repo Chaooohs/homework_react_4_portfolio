@@ -30,7 +30,7 @@ const Ellipse = ({ text, icon, data, onNavigateTo }) => {
   }
 
   return (
-    <div className="wrap">
+    <>
       <div onClick={onNavigateTo} className='ellipse somework__ellipse' data-line={data} onMouseOver={ellipseHoverUpHandler} onMouseOut={ellipseHoverDownHandler}>
         <img className='ellipse__img' data-image={data} src={ellipse} alt="img"></img>
         <div className='ellipse__content'>
@@ -38,7 +38,7 @@ const Ellipse = ({ text, icon, data, onNavigateTo }) => {
           <div className='text_md ellipse__text'>{text}</div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

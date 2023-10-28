@@ -1,89 +1,53 @@
+import Data from '../data/data.json'
 import Nav from '../components/Nav'
+import Works from '../components/Works';
+import Card from '../components/Work-card';
 import Ellipse from '../components/Ellipse'
 
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 
-import image1 from '../img/image6.png'
-import image2 from '../img/image7.png'
-import image3 from '../img/image8.png'
-import image4 from '../img/image9.png'
-import image5 from '../img/image10.png'
-import image6 from '../img/image11.png'
 import arrowRight from '../img/arrow-rigth-black.svg'
-import arrowWhite from '../img/arrow-rigth-white.svg'
+import arrowLeft from '../img/arrow-left-black.svg'
+
 
 const Htmlpage = () => {
+
+  const html = Data.filter((item) => (item.categories === 'html'))
 
   useEffect(() => {
     window.scrollTo(0, 0);
   });
 
   const navigate = useNavigate();
-  const navigateToHandler = () => navigate('/')
-
-
+  const navigateToPrevHandler = () => navigate('/')
+  const navigateToNextHandler = () => navigate('/Js')
 
   return (
     <>
       <Nav />
-
       <div className="wrap" id='up'>
         <h1 className='title text_lg'>
           Vincent Van Gogh. post-impressionist painter and artist
         </h1>
       </div>
-
       <main>
         <div className="wrap">
           <div className='work grid'>
-            <a href='#!' className='work__one'>
-              <img src={image1} alt='work one'></img>
-              <div className='description text_sm'>
-                <span>The Starry Night</span>
-                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
-              </div>
-            </a>
-            <a href='#!' className='work__two'>
-              <img src={image2} alt='work one'></img>
-              <div className='description text_sm'>
-                <span>The Night Café</span>
-                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
-              </div>
-            </a>
-            <a href='#!' className='work__three'>
-              <img src={image3} alt='work one'></img>
-              <div className='description text_sm'>
-                <span>The Red Vineyard</span>
-                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
-              </div>
-            </a>
-            <a href='#!' className='work__four'>
-              <img src={image4} alt='work one'></img>
-              <div className='description text_sm'>
-                <span>Ward in the Hospital in Arles</span>
-                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
-              </div>
-            </a>
-            <a href='#!' className='work__five'>
-              <img src={image5} alt='work one'></img>
-              <div className='description text_sm'>
-                <span>Ploughman in the Fields near Arles</span>
-                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
-              </div>
-            </a>
-            <a href='#!' className='work__six'>
-              <img src={image6} alt='work one'></img>
-              <div className='description text_sm'>
-                <span>Paul Gauguin's Armchair</span>
-                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
-              </div>
-            </a>
+            <Works works={html} />
+            {/* <Card className={'work__one card'} src={dupper} description={'html + css'} notes={'(адаптив)'} href={'https://chaooohs-dupper-bully.netlify.app/'} />
+            <Card className={'work__two card'} src={resume} description={'html + css'} notes={'(адаптив)'} href={'https://chaooohs-resume.netlify.app/'} />
+            <Card className={'work__three card'} src={bikcraft} description={'html + css'} notes={'(адаптив)'} href={'https://chaooohs-bikcraft.netlify.app/'} />
+            <Card className={'work__four card'} src={work6} description={'html + css'} notes={'(адаптив)'} href={'https://chaooohs-homework-6.netlify.app/'} />
+            <Card className={'work__five card'} src={orno} description={'html + css'} notes={'(адаптив)'} href={'https://chaooohs-orno.netlify.app/'} />
+            <Card className={'work__six card'} src={infinizai} description={'html + css'} notes={'(адаптив)'} href={'https://chaooohs-infinizai.netlify.app/'} /> */}
           </div>
         </div>
       </main>
-
-      <Ellipse onNavigateTo={navigateToHandler} text={`js`} icon={arrowRight} data="next" />
+      <div className="wrap">
+        <Ellipse onNavigateTo={navigateToPrevHandler} text={`Home`} icon={arrowLeft} data="prev" />
+        <Ellipse onNavigateTo={navigateToNextHandler} text={`Js`} icon={arrowRight} data="next" />
+      </div>
     </>
   )
 }

@@ -4,13 +4,9 @@ import Ellipse from '../components/Ellipse'
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 
-import image1 from '../img/image1.png'
 import image2 from '../img/image2.png'
-import image3 from '../img/image3.png'
-import image4 from '../img/image4.png'
-import image5 from '../img/image5.png'
 import arrowRight from '../img/arrow-rigth-black.svg'
-import arrowWhite from '../img/arrow-rigth-white.svg'
+import arrowLeft from '../img/arrow-left-black.svg'
 
 const Homepage = () => {
 
@@ -20,7 +16,8 @@ const Homepage = () => {
   });
 
   const navigate = useNavigate();
-  const navigateToHandler = () => navigate('/Html');
+  const navigateToPrevHandler = () => navigate('/React');
+  const navigateToNextHandler = () => navigate('/Html');
 
   return (
     <>
@@ -74,54 +71,31 @@ const Homepage = () => {
 
         <div className="wrap">
           <div className='somework grid'>
-            <a className='somework__one card' target="_blank" href='https://chaooohs-sport-if.netlify.app/'>
-              <img src={image1} alt='work one'></img>
-              <div className='description text_md'>
-                <span>html + css + js</span>
-                <span className='notes'>(адаптив)</span>
-                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
-              </div>
-            </a>
-            <a href='#!' className='somework__two card'>
-              <img src={image2} alt='work one'></img>
-              <div className='description text_sm'>
-                <span>The Starry Night</span>
-                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
-              </div>
-            </a>
-            <a href='#!' className='somework__three card'>
-              <img src={image3} alt='work one'></img>
-              <div className='description text_sm'>
-                <span>The Starry Night</span>
-                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
-              </div>
-            </a>
+
+            {/* <WorkCard className={'somework__one card'} src={store} description={'html + css + js'} notes={'(адаптив)'} href={'https://chaooohs-sport-if.netlify.app/'} />
+            <WorkCard className={'somework__two card'} src={image2} description={''} notes={'(адаптив)'} href={''} />
+            <WorkCard className={'somework__three card'} src={infinizai} description={'html + css'} notes={'(адаптив)'} href={'https://chaooohs-infinizai.netlify.app/'} /> */}
+
             <div className='somework__four text_md'>
               The interior depicted is the Café de la Gare, 30 Place Lamartine, run by Joseph Ginoux and his wife Marie, who in November 1888 posed for Van Gogh's and Gauguin's Arlésienne; a bit later, Joseph Ginoux evidently posed for both artists.
             </div>
-            <a className='somework__five card' target="_blank" href='https://chaooohs-pizza.netlify.app/'>
-              <img src={image4} alt='work one'></img>
-              <div className='description text_md'>
-                <span>html + css + js</span>
-                <span className='notes'>(drag & drop)</span>
-                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
-              </div>
-            </a>
+
+            {/* <WorkCard className={'somework__five card'} src={pizza} description={'html + css + js'} notes={'(адаптив)'} href={'https://chaooohs-pizza.netlify.app/'} /> */}
+
             <div className='somework__six text_md'>
               he Night Café (French: Le Café de nuit) is an oil painting created by Dutch artist Vincent van Gogh in September 1888 in Arles.[1] Its title is inscribed lower right beneath the signature. The painting is owned by Yale University and is currently held at the Yale University Art Gallery in New Haven, Connecticut.
             </div>
-            <a href='#!' className='somework__seven card'>
-              <img src={image5} alt='work one'></img>
-              <div className='description text_sm'>
-                <span>The Starry Night</span>
-                <img className='description__arrow' src={arrowWhite} alt="arrow"></img>
-              </div>
-            </a>
+
+            {/* <WorkCard className={'somework__seven card'} src={achille} description={'html + css + bootstrap'} notes={'(адаптив, сайт на 9 сторiнок)'} href={'https://chaooohs-achille-ciio.netlify.app/'} /> */}
+
           </div>
         </div>
       </main>
 
-      <Ellipse onNavigateTo={navigateToHandler} text={`html + css`} icon={arrowRight} data="next" />
+      <div className="wrap">
+        <Ellipse onNavigateTo={navigateToPrevHandler} text={`React`} icon={arrowLeft} data="prev" />
+        <Ellipse onNavigateTo={navigateToNextHandler} text={`html + css`} icon={arrowRight} data="next" />
+      </div>
     </>
   )
 }

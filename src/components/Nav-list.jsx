@@ -18,14 +18,14 @@ const NavList = () => {
         </Link>
       </li>
       <li className='list__item'>
-        <Link >
+        <Link to="/Js">
           <span className='list__link text_md'>
             js
           </span>
         </Link>
       </li>
       <li className='list__item'>
-        <Link >
+        <Link to="/React">
           <span className='list__link text_md'>
             react
           </span>
