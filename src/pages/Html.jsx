@@ -12,17 +12,15 @@ const Htmlpage = ({data}) => {
 
   console.log(data)
 
-  const react = data.filter((item) => (item.categories === 'react'))
+  const html = data.filter((item) => (item.categories === 'html'))
 
   useEffect(() => {
     window.scrollTo(0, 0);
   });
 
   const navigate = useNavigate();
-  const navigateToPrevHandler = () => navigate('/Js')
-  const navigateToNextHandler = () => navigate('/')
-
-
+  const navigateToPrevHandler = () => navigate('/')
+  const navigateToNextHandler = () => navigate('/Js')
 
   return (
     <>
@@ -37,14 +35,14 @@ const Htmlpage = ({data}) => {
       <main>
         <div className="wrap">
           <div className='work grid'>
-            <Works works={react} />
+            <Works works={html} />
           </div>
         </div>
       </main>
-
+      
       <div className="wrap">
-        <Ellipse onNavigateTo={navigateToPrevHandler} text={`Js`} icon={arrowLeft} data="prev" />
-        <Ellipse onNavigateTo={navigateToNextHandler} text={`Home`} icon={arrowRight} data="next" />
+        <Ellipse onNavigateTo={navigateToPrevHandler} text={`Home`} icon={arrowLeft} data="prev" />
+        <Ellipse onNavigateTo={navigateToNextHandler} text={`Js`} icon={arrowRight} data="next" />
       </div>
     </>
   )

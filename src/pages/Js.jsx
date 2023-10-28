@@ -1,18 +1,23 @@
 import Nav from '../components/Nav'
+import Works from '../components/Works';
 import Ellipse from '../components/Ellipse'
 
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 
-import image1 from '../img/image6.png'
-import image2 from '../img/image7.png'
-import image3 from '../img/image8.png'
-import image5 from '../img/image10.png'
-import image6 from '../img/image11.png'
+// import image1 from '../img/image6.png'
+// import image2 from '../img/image7.png'
+// import image3 from '../img/image8.png'
+// import image5 from '../img/image10.png'
+// import image6 from '../img/image11.png'
 import arrowRight from '../img/arrow-rigth-black.svg'
 import arrowLeft from '../img/arrow-left-black.svg'
 
 const Htmlpage = () => {
+
+  // console.log(data)
+
+  // const html = data.filter((item) => (item.categories === 'js'))
 
   useEffect(() => {
     window.scrollTo(0, 0);
