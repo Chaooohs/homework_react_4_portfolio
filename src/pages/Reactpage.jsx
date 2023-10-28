@@ -8,11 +8,10 @@ import { useNavigate } from 'react-router-dom'
 import arrowRight from '../img/arrow-rigth-black.svg'
 import arrowLeft from '../img/arrow-left-black.svg'
 
-const Htmlpage = ({data}) => {
-
-  console.log(data)
+const Reactpage = ({data}) => {
 
   const react = data.filter((item) => (item.categories === 'react'))
+  console.log(react)
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -50,4 +49,4 @@ const Htmlpage = ({data}) => {
   )
 }
 
-export default Htmlpage
+export default Reactpage

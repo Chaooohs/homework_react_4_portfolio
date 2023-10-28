@@ -10,9 +10,8 @@ import arrowLeft from '../img/arrow-left-black.svg'
 
 const Htmlpage = ({data}) => {
 
-  console.log(data)
-
   const html = data.filter((item) => (item.categories === 'html'))
+  console.log(html)
 
   useEffect(() => {
     window.scrollTo(0, 0);

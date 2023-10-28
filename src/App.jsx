@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 
 import Layout from "./components/Layout";
 import Homepage from "./pages/Homepage"
-import Html from "./pages/Html";
+import Htmlpage from "./pages/Htmlpage";
 import Js from "./pages/Js";
-import React from "./pages/React";
+import Reactpage from "./pages/Reactpage";
 
 function App() {
 
@@ -28,9 +28,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Homepage />} />
-            <Route path="Html" element={<Html data={works} />} />
+            <Route path="Html" element={<Htmlpage data={works} />} />
             <Route path="Js" element={<Js />} />
-            <Route path="React" element={<React data={works} />} />
+            <Route path="React" element={<Reactpage data={works} />} />
           </Route>
         </Routes>
       </BrowserRouter>
