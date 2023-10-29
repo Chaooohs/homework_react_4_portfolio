@@ -1,37 +1,29 @@
 import { Link } from 'react-router-dom'
 
-const NavList = () => {
+const NavList = ({ onCloseList }) => {
   return (
-    <ul className='list'>
-      <li className='list__item'>
-        <Link to="/">
+    <div className='list' onClick={onCloseList}>
+        <Link to="/" className='list__item'>
           <span className='list__link text_md'>
             home
           </span>
         </Link>
-      </li>
-      <li className='list__item'>
-        <Link to="/Html">
+        <Link to="/Html" className='list__item'>
           <span className='list__link text_md'>
             html + css
           </span>
         </Link>
-      </li>
-      <li className='list__item'>
-        <Link to="/Js">
+        <Link to="/Js" className='list__item'>
           <span className='list__link text_md'>
             js
           </span>
         </Link>
-      </li>
-      <li className='list__item'>
-        <Link to="/React">
+        <Link to="/React" className='list__item'>
           <span className='list__link text_md'>
             react
           </span>
         </Link>
-      </li>
-    </ul>
+    </div>
   )
 }
 

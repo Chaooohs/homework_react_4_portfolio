@@ -1,4 +1,5 @@
 import Nav from '../components/Nav'
+import Works from '../components/Works';
 import Ellipse from '../components/Ellipse'
 
 import { useEffect } from 'react';
@@ -8,7 +9,9 @@ import image2 from '../img/image2.png'
 import arrowRight from '../img/arrow-rigth-black.svg'
 import arrowLeft from '../img/arrow-left-black.svg'
 
-const HomePage = () => {
+const MainPage = ({ data }) => {
+
+  const main = data.filter((item) => (item.categories === 'main'))
 
   useEffect(() => {
     // 👇️ scroll to top on page load
@@ -21,8 +24,6 @@ const HomePage = () => {
 
   return (
     <>
-      <Nav />
-
       <header>
         <div className="header" id='up'>
           <h1 className='text_lg title-home'>
@@ -70,34 +71,25 @@ const HomePage = () => {
         </div>
 
         <div className="wrap">
-          <div className='somework grid'>
-
-            {/* <WorkCard className={'somework__one card'} src={store} description={'html + css + js'} notes={'(адаптив)'} href={'https://chaooohs-sport-if.netlify.app/'} />
-            <WorkCard className={'somework__two card'} src={image2} description={''} notes={'(адаптив)'} href={''} />
-            <WorkCard className={'somework__three card'} src={infinizai} description={'html + css'} notes={'(адаптив)'} href={'https://chaooohs-infinizai.netlify.app/'} /> */}
-
-            <div className='somework__four text_md'>
+          <div className='layout grid'>
+            <Works works={main} />
+            <img className='layout__one' src={image2} alt="img"></img>
+            <div className='layout__two text_md'>
               The interior depicted is the Café de la Gare, 30 Place Lamartine, run by Joseph Ginoux and his wife Marie, who in November 1888 posed for Van Gogh's and Gauguin's Arlésienne; a bit later, Joseph Ginoux evidently posed for both artists.
             </div>
-
-            {/* <WorkCard className={'somework__five card'} src={pizza} description={'html + css + js'} notes={'(адаптив)'} href={'https://chaooohs-pizza.netlify.app/'} /> */}
-
-            <div className='somework__six text_md'>
+            <div className='layout__three text_md'>
               he Night Café (French: Le Café de nuit) is an oil painting created by Dutch artist Vincent van Gogh in September 1888 in Arles.[1] Its title is inscribed lower right beneath the signature. The painting is owned by Yale University and is currently held at the Yale University Art Gallery in New Haven, Connecticut.
             </div>
-
-            {/* <WorkCard className={'somework__seven card'} src={achille} description={'html + css + bootstrap'} notes={'(адаптив, сайт на 9 сторiнок)'} href={'https://chaooohs-achille-ciio.netlify.app/'} /> */}
-
           </div>
         </div>
       </main>
 
       <div className="wrap">
         <Ellipse onNavigateTo={navigateToPrevHandler} text={`React`} icon={arrowLeft} data="prev" />
-        <Ellipse onNavigateTo={navigateToNextHandler} text={`html + css`} icon={arrowRight} data="next" />
+        <Ellipse onNavigateTo={navigateToNextHandler} text={`html`} icon={arrowRight} data="next" />
       </div>
     </>
   )
 }
 
-export default HomePage
+export default MainPage

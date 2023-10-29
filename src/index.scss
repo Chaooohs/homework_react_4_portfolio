@@ -67,6 +67,11 @@ main {
   grid-template-columns: repeat(14, 1fr);
 }
 
+.layout {
+  grid-auto-rows: 10cqi;
+  margin-top: 8%;
+}
+
 .description {
   display: flex;
   align-items: center;
@@ -225,7 +230,7 @@ main {
 
 /* #endregion */
 
-/* #region Homepage */
+/* #region Mainpage */
 
 .header {
   height: 62cqi;
@@ -270,45 +275,43 @@ main {
   opacity: .4;
 }
 
-.somework {
-  grid-template-rows: repeat(31, 10cqi);
+.somework {}
 
-  &__one {
-    grid-row: 1/5;
-    grid-column: 3/13;
-  }
+#main0 {
+  grid-row: 1/5;
+  grid-column: 3/13;
+}
 
-  &__two {
-    grid-row: 6/8;
-    grid-column: 3/6;
-  }
+.layout__one {
+  grid-row: 6/8;
+  grid-column: 3/6;
+}
 
-  &__three {
-    grid-row: 7/11;
-    grid-column: 8/13;
-  }
+#main1 {
+  grid-row: 7/11;
+  grid-column: 8/13;
+}
 
-  &__four {
-    grid-row: 10/14;
-    grid-column: 2/7;
-    font-weight: 500;
-  }
+.layout__two {
+  grid-row: 10/14;
+  grid-column: 2/7;
+  font-weight: 500;
+}
 
-  &__five {
-    grid-row: 14/20;
-    grid-column: 3/13;
-  }
+#main2 {
+  grid-row: 14/20;
+  grid-column: 3/13;
+}
 
-  &__six {
-    grid-row: 22/25;
-    grid-column: 6/14;
-    font-weight: 500;
-  }
+.layout__three {
+  grid-row: 22/25;
+  grid-column: 6/14;
+  font-weight: 500;
+}
 
-  &__seven {
-    grid-row: 26/32;
-    grid-column: 3/13;
-  }
+#main3 {
+  grid-row: 26/32;
+  grid-column: 3/13;
 }
 
 .nav-page-content {
@@ -324,11 +327,6 @@ main {
 .title {
   width: 74%;
   margin-top: 14%;
-}
-
-.work {
-  grid-template-rows: repeat(17, 10cqi);
-  margin-top: 8%;
 }
 
 #card0 {

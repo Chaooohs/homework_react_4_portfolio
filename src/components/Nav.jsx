@@ -10,9 +10,13 @@ const Nav = () => {
     el('.list').classList.toggle('active')
   }
 
+  const closeListHandler = (e) => {
+     if (e.target.closest('.list__item')) openMenuHandler()
+  }
+
   return (
     <div className='nav wrap'>
-      <NavList />
+      <NavList onCloseList={closeListHandler} />
       <Burger onOpenMenu={openMenuHandler} />
     </div>
   )
